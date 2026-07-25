@@ -1,0 +1,47 @@
+import type { Metadata } from "next";
+import { SiteFooter } from "../components/SiteFooter";
+import { SiteHeader } from "../components/SiteHeader";
+import { projects } from "../site-data";
+
+export const metadata: Metadata = {
+  title: "Work",
+  description: "Selected software and experiments by Shaurya Pathak.",
+};
+
+export default function WorkPage() {
+  return (
+    <main className="page-shell">
+      <SiteHeader />
+      <header className="page-header">
+        <p className="eyebrow">Selected work</p>
+        <h1 className="page-title">Tools, systems, and experiments.</h1>
+        <p className="page-lede">
+          I tend to make software that turns messy inputs into something easier
+          to inspect, understand, or use. These are the clearest examples.
+        </p>
+      </header>
+
+      <ol className="project-list">
+        {projects.map((project) => (
+          <li className="project" id={project.id} key={project.id}>
+            <div className="project-heading">
+              <h2>{project.name}</h2>
+              <p className="project-status">{project.status}</p>
+            </div>
+            <p>{project.description}</p>
+            <div className="project-links">
+              <a href={project.github}>View source →</a>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <p>
+        <a className="text-link" href="https://github.com/shaurya-pathak">
+          Everything else on GitHub →
+        </a>
+      </p>
+      <SiteFooter />
+    </main>
+  );
+}
