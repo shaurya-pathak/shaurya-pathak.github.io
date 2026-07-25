@@ -36,7 +36,7 @@ export function PostFeed({ posts }: { posts: Post[] }) {
             <li className="post-entry" key={`${post.date}-${post.title ?? post.excerpt}`}>
               <article>
                 <p className="post-meta">
-                  {post.date} · {post.type}
+                  {post.date} · {post.type} · {post.provenance}
                 </p>
                 {post.title ? <h2 className="post-title">{post.title}</h2> : null}
                 <p className={post.title ? "post-excerpt" : "post-body"}>

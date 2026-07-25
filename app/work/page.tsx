@@ -41,6 +41,11 @@ export default function WorkPage() {
           Everything else on GitHub →
         </a>
       </p>
+      <p className="provenance-note">
+        Project descriptions are AI-assisted summaries of my public project
+        documentation. The underlying work and repositories are mine unless a
+        project says otherwise.
+      </p>
       <SiteFooter />
     </main>
   );

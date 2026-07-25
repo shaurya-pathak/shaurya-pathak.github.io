@@ -35,6 +35,11 @@ export default function AboutPage() {
         <p>
           The views here are my own. Nothing on this site speaks for my employer.
         </p>
+        <p>
+          Every published entry includes an authorship label. “By Shaurya” means
+          I wrote it. “AI-assisted” means AI drafted or materially rewrote the
+          prose, even when the underlying experience or project is mine.
+        </p>
       </div>
 
       <p>

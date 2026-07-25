@@ -72,6 +72,9 @@ export default function ExperiencePage() {
           Open résumé →
         </a>
       </p>
+      <p className="provenance-note">
+        Experience copy is AI-assisted and based on my January 2026 résumé.
+      </p>
       <SiteFooter />
     </main>
   );

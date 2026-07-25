@@ -171,6 +171,14 @@ button {
   color: var(--muted);
 }
 
+.provenance-note {
+  max-width: 650px;
+  margin: 36px 0 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
 .page-header {
   margin: 86px 0 64px;
 }

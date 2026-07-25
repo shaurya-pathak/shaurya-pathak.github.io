@@ -2,6 +2,7 @@ export type Post = {
   date: string;
   type: "note" | "project" | "essay";
   tags: string[];
+  provenance: string;
   title?: string;
   excerpt: string;
   href?: string;
@@ -12,6 +13,7 @@ export const posts: Post[] = [
     date: "July 25, 2026",
     type: "note",
     tags: ["life"],
+    provenance: "AI-assisted",
     excerpt:
       "I wanted a place that could hold software, food, unfinished thoughts, and whatever else seems worth remembering. This is that place.",
   },
@@ -19,6 +21,7 @@ export const posts: Post[] = [
     date: "July 20, 2026",
     type: "project",
     tags: ["software", "tools"],
+    provenance: "AI-assisted from project documentation",
     title: "Glyde: a local-first layer for making presentations",
     excerpt:
       "Glyde turns structured briefs into native Slidev decks, with reusable interactive components, theme contracts, visual checks, and an experimental live-session layer.",
@@ -28,6 +31,7 @@ export const posts: Post[] = [
     date: "April 8, 2026",
     type: "project",
     tags: ["software", "tools"],
+    provenance: "AI-assisted from project documentation",
     title: "Kaivra: animation as code",
     excerpt:
       "A declarative animation engine that turns structured JSON or YAML into stills, videos, and browser previews—with an MCP workflow for guided authoring.",
@@ -37,6 +41,7 @@ export const posts: Post[] = [
     date: "January 3, 2024",
     type: "essay",
     tags: ["software", "chess"],
+    provenance: "By Shaurya · adapted with AI from the original",
     title: "What would make a chess engine feel human?",
     excerpt:
       "Traditional engines calculate, neural engines learn patterns, and people do something messier. I started thinking about whether a chess engine could model that mess rather than eliminate it.",

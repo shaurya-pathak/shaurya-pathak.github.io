@@ -14,7 +14,10 @@ export default function EyeChessPage() {
       <SiteHeader />
       <article>
         <header className="article-header">
-          <p className="eyebrow">January 3, 2024 · chess · software</p>
+          <p className="eyebrow">
+            January 3, 2024 · chess · software · By Shaurya, adapted with AI
+            from the original
+          </p>
           <h1 className="page-title">What would make a chess engine feel human?</h1>
           <p className="page-lede">
             Traditional engines calculate, neural engines learn patterns, and
