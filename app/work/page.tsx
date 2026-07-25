@@ -29,9 +29,11 @@ export default function WorkPage() {
               <p className="project-status">{project.status}</p>
             </div>
             <p>{project.description}</p>
-            <div className="project-links">
-              <a href={project.github}>View source →</a>
-            </div>
+            {project.github ? (
+              <div className="project-links">
+                <a href={project.github}>View source →</a>
+              </div>
+            ) : null}
           </li>
         ))}
       </ol>

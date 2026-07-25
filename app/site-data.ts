@@ -11,6 +11,16 @@ export type Post = {
 export const posts: Post[] = [
   {
     date: "July 25, 2026",
+    type: "project",
+    tags: ["software", "tools"],
+    provenance: "AI-assisted from local project documentation",
+    title: "Get Me to a Human",
+    excerpt:
+      "An operator-supervised voice agent that calls a business, works through the phone tree, and handles a bounded support conversation until it reaches a person or a grounded outcome.",
+    href: "/work#get-me-to-a-human",
+  },
+  {
+    date: "July 25, 2026",
     type: "note",
     tags: ["life"],
     provenance: "AI-assisted",
@@ -50,6 +60,13 @@ export const posts: Post[] = [
 ];
 
 export const projects = [
+  {
+    id: "get-me-to-a-human",
+    name: "Get Me to a Human",
+    status: "Operator-supervised prototype · 2026",
+    description:
+      "A local-first outbound voice agent for the annoying part of calling a business. Given a bounded support brief, it can place a call, navigate nested IVR menus with DTMF, wait through announcements, speak with a representative, and record an outcome only when that outcome is grounded in the other party’s words. Speech recognition, synthesis, and model inference can run locally on Apple Silicon; Twilio provides the phone transport.",
+  },
   {
     id: "kaivra",
     name: "Kaivra",
