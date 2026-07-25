@@ -12,12 +12,6 @@ export default function Home() {
   return (
     <main className="site-shell">
       <SiteHeader />
-
-      <section className="intro" aria-labelledby="intro-title">
-        <h1 id="intro-title">I make software and other things.</h1>
-        <p>This is where I keep track of them.</p>
-      </section>
-
       <PostFeed posts={posts} />
     </main>
   );

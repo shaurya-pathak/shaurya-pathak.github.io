@@ -87,16 +87,8 @@ button {
   font-size: 0.94rem;
 }
 
-.intro {
-  margin: 86px 0 78px;
-}
-
-.intro h1,
-.intro p {
-  margin: 0;
-  font-size: clamp(1.45rem, 4vw, 1.8rem);
-  line-height: 1.42;
-  letter-spacing: -0.025em;
+.post-feed {
+  margin-top: 76px;
 }
 
 .tag-filter {
@@ -346,14 +338,13 @@ button {
     margin-top: 16px;
   }
 
-  .intro,
   .page-header,
   .article-header {
     margin-top: 64px;
   }
 
-  .intro {
-    margin-bottom: 58px;
+  .post-feed {
+    margin-top: 58px;
   }
 
   .project-heading,

@@ -16,7 +16,7 @@ export function PostFeed({ posts }: { posts: Post[] }) {
       : posts.filter((post) => post.tags.includes(activeTag));
 
   return (
-    <section aria-label="Recent writing and projects">
+    <section className="post-feed" aria-label="Recent writing and projects">
       <div className="tag-filter" aria-label="Filter entries by tag">
         {tags.map((tag) => (
           <button
