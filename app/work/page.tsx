@@ -13,12 +13,7 @@ export default function WorkPage() {
     <main className="page-shell">
       <SiteHeader />
       <header className="page-header">
-        <p className="eyebrow">Selected work</p>
-        <h1 className="page-title">Tools, systems, and experiments.</h1>
-        <p className="page-lede">
-          I tend to make software that turns messy inputs into something easier
-          to inspect, understand, or use. These are the clearest examples.
-        </p>
+        <h1 className="page-title">Tools</h1>
       </header>
 
       <ol className="project-list">

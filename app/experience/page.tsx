@@ -5,7 +5,7 @@ import { experiences } from "../site-data";
 
 export const metadata: Metadata = {
   title: "Experience",
-  description: "Work and education for Shaurya Pathak.",
+  description: "Work experience for Shaurya Pathak.",
 };
 
 export default function ExperiencePage() {
@@ -13,12 +13,7 @@ export default function ExperiencePage() {
     <main className="page-shell">
       <SiteHeader />
       <header className="page-header">
-        <p className="eyebrow">Experience</p>
-        <h1 className="page-title">Work that crossed boundaries.</h1>
-        <p className="page-lede">
-          My work sits between software infrastructure, machine learning, data,
-          and the coordination required to make those systems useful.
-        </p>
+        <h1 className="page-title">Experience</h1>
       </header>
 
       <ol className="experience-list">
@@ -49,13 +44,6 @@ export default function ExperiencePage() {
         <ol className="education-list">
           <li className="education-item">
             <div className="education-heading">
-              <h2>UC Berkeley</h2>
-              <p className="date-range">2025 – present</p>
-            </div>
-            <p>Master of Information and Data Science</p>
-          </li>
-          <li className="education-item">
-            <div className="education-heading">
               <h2>UC Riverside</h2>
               <p className="date-range">2021 – 2024</p>
             </div>
@@ -73,7 +61,7 @@ export default function ExperiencePage() {
         </a>
       </p>
       <p className="provenance-note">
-        Experience copy is AI-assisted and based on my January 2026 résumé.
+        Experience copy is AI-assisted and based on my résumé.
       </p>
       <SiteFooter />
     </main>

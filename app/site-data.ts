@@ -55,16 +55,6 @@ export const posts: Post[] = [
       "A declarative animation engine that turns structured JSON or YAML into stills, videos, and browser previews—with an MCP workflow for guided authoring.",
     href: "/work#kaivra",
   },
-  {
-    date: "January 3, 2024",
-    type: "essay",
-    tags: ["software", "chess"],
-    provenance: "By Shaurya · adapted with AI from the original",
-    title: "What would make a chess engine feel human?",
-    excerpt:
-      "Traditional engines calculate, neural engines learn patterns, and people do something messier. I started thinking about whether a chess engine could model that mess rather than eliminate it.",
-    href: "/notes/eyechess",
-  },
 ];
 
 export const projects = [
