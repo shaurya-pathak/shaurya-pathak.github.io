@@ -12,10 +12,6 @@ export default function Home() {
   return (
     <main className="site-shell">
       <SiteHeader />
-      <p className="site-intro">
-        Software engineer in Santa Clara. I work at NVIDIA. I build tools and
-        write here.
-      </p>
       <PostFeed posts={posts} />
     </main>
   );
