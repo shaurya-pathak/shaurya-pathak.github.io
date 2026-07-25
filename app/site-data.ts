@@ -11,6 +11,14 @@ export type Post = {
 export const posts: Post[] = [
   {
     date: "July 25, 2026",
+    type: "note",
+    tags: ["life", "voice notes"],
+    provenance: "By Shaurya · voice note · automatically transcribed",
+    excerpt:
+      "I want to be able to talk like this and have a transcription of that available here.",
+  },
+  {
+    date: "July 25, 2026",
     type: "project",
     tags: ["software", "tools"],
     provenance: "AI-assisted from local project documentation",

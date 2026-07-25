@@ -37,8 +37,9 @@ export default function AboutPage() {
         </p>
         <p>
           Every published entry includes an authorship label. “By Shaurya” means
-          I wrote it. “AI-assisted” means AI drafted or materially rewrote the
-          prose, even when the underlying experience or project is mine.
+          I wrote it. “Voice note” means I spoke it and the prose is a direct
+          transcription. “AI-assisted” means AI drafted or materially rewrote
+          the prose, even when the underlying experience or project is mine.
         </p>
       </div>
 
