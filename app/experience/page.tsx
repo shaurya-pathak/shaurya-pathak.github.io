@@ -12,9 +12,7 @@ export default function ExperiencePage() {
   return (
     <main className="page-shell">
       <SiteHeader />
-      <header className="page-header">
-        <h1 className="page-title">Experience</h1>
-      </header>
+      <h1 className="sr-only">Experience</h1>
 
       <ol className="experience-list">
         {experiences.map((experience) => (
@@ -57,11 +55,8 @@ export default function ExperiencePage() {
 
       <p>
         <a className="text-link" href="/Shaurya-Pathak-Resume.pdf">
-          Open résumé →
+          Résumé
         </a>
-      </p>
-      <p className="provenance-note">
-        Experience copy is AI-assisted and based on my résumé.
       </p>
       <SiteFooter />
     </main>

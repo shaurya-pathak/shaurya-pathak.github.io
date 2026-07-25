@@ -5,13 +5,17 @@ import { posts } from "./site-data";
 
 export const metadata: Metadata = {
   title: "Shaurya Pathak",
-  description: "Software, projects, notes, and other things by Shaurya Pathak.",
+  description: "Tools and notes by Shaurya Pathak.",
 };
 
 export default function Home() {
   return (
     <main className="site-shell">
       <SiteHeader />
+      <p className="site-intro">
+        Software engineer in Santa Clara. I work at NVIDIA. I build tools and
+        write here.
+      </p>
       <PostFeed posts={posts} />
     </main>
   );

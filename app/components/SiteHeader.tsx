@@ -7,7 +7,7 @@ export function SiteHeader() {
         Shaurya Pathak
       </Link>
       <nav className="site-nav" aria-label="Primary navigation">
-        <Link href="/work">Work</Link>
+        <Link href="/work">Tools</Link>
         <Link href="/experience">Experience</Link>
         <Link href="/about">About</Link>
         <a href="/Shaurya-Pathak-Resume.pdf">Résumé</a>

@@ -26,17 +26,17 @@ export async function generateMetadata(): Promise<Metadata> {
       default: "Shaurya Pathak",
       template: "%s · Shaurya Pathak",
     },
-    description: "Software, projects, notes, and other things by Shaurya Pathak.",
+    description: "Tools and notes by Shaurya Pathak.",
     openGraph: {
       type: "website",
       title: "Shaurya Pathak",
-      description: "I make software and other things.",
+      description: "Tools and notes by Shaurya Pathak.",
       images: [{ url: previewImage, width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       title: "Shaurya Pathak",
-      description: "I make software and other things.",
+      description: "Tools and notes by Shaurya Pathak.",
       images: [previewImage],
     },
   };

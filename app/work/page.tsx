@@ -4,17 +4,15 @@ import { SiteHeader } from "../components/SiteHeader";
 import { projects } from "../site-data";
 
 export const metadata: Metadata = {
-  title: "Work",
-  description: "Selected software and experiments by Shaurya Pathak.",
+  title: "Tools",
+  description: "Tools by Shaurya Pathak.",
 };
 
 export default function WorkPage() {
   return (
     <main className="page-shell">
       <SiteHeader />
-      <header className="page-header">
-        <h1 className="page-title">Tools</h1>
-      </header>
+      <h1 className="sr-only">Tools</h1>
 
       <ol className="project-list">
         {projects.map((project) => (
@@ -26,7 +24,7 @@ export default function WorkPage() {
             <p>{project.description}</p>
             {project.github ? (
               <div className="project-links">
-                <a href={project.github}>View source →</a>
+                <a href={project.github}>Source</a>
               </div>
             ) : null}
           </li>
@@ -35,13 +33,8 @@ export default function WorkPage() {
 
       <p>
         <a className="text-link" href="https://github.com/shaurya-pathak">
-          Everything else on GitHub →
+          More on GitHub
         </a>
-      </p>
-      <p className="provenance-note">
-        Project descriptions are AI-assisted summaries of my public project
-        documentation. The underlying work and repositories are mine unless a
-        project says otherwise.
       </p>
       <SiteFooter />
     </main>
