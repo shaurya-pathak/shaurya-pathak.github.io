@@ -3,7 +3,7 @@
 :root {
   --paper: #f7f6f1;
   --ink: #20211f;
-  --muted: #74766f;
+  --muted: #646760;
   --line: #dcdcd5;
   --accent: #244e3b;
 }
@@ -94,8 +94,19 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 18px;
+  gap: 0 18px;
   font-size: 0.9rem;
+}
+
+.site-nav a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 .site-intro {
@@ -118,7 +129,8 @@ button {
 
 .tag-filter button {
   appearance: none;
-  padding: 0;
+  min-height: 44px;
+  padding: 10px 0;
   border: 0;
   background: transparent;
   cursor: pointer;
@@ -130,6 +142,10 @@ button {
 .tag-filter button:hover,
 .tag-filter button[aria-pressed="true"] {
   color: var(--accent);
+}
+
+.tag-filter button[aria-pressed="true"] {
+  text-decoration: underline;
 }
 
 .post-list {
@@ -167,7 +183,9 @@ button {
 
 .read-more,
 .text-link {
-  display: inline-block;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
   margin-top: 12px;
   color: var(--accent);
   font-size: 0.94rem;
@@ -313,6 +331,12 @@ button {
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.84rem;
+}
+
+.site-footer a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
 }
 
 @media (max-width: 640px) {

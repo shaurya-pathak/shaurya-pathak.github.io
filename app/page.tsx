@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PostFeed } from "./components/PostFeed";
+import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
 import { posts } from "./site-data";
 
@@ -13,6 +14,7 @@ export default function Home() {
     <main className="site-shell">
       <SiteHeader />
       <PostFeed posts={posts} />
+      <SiteFooter />
     </main>
   );
 }

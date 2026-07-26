@@ -5,10 +5,13 @@ import { useMemo, useState } from "react";
 import type { Post } from "../site-data";
 
 export function PostFeed({ posts }: { posts: Post[] }) {
-  const tags = useMemo(
-    () => ["all", ...Array.from(new Set(posts.flatMap((post) => post.tags)))],
-    [posts],
-  );
+  const tags = useMemo(() => {
+    const uniqueTags = Array.from(new Set(posts.flatMap((post) => post.tags)));
+    const usefulTags = uniqueTags.filter(
+      (tag) => posts.some((post) => !post.tags.includes(tag)),
+    );
+    return usefulTags.length ? ["all", ...usefulTags] : [];
+  }, [posts]);
   const [activeTag, setActiveTag] = useState("all");
   const visiblePosts =
     activeTag === "all"
@@ -17,18 +20,20 @@ export function PostFeed({ posts }: { posts: Post[] }) {
 
   return (
     <section className="post-feed" aria-label="Recent writing and projects">
-      <div className="tag-filter" aria-label="Filter entries by tag">
-        {tags.map((tag) => (
-          <button
-            type="button"
-            key={tag}
-            aria-pressed={activeTag === tag}
-            onClick={() => setActiveTag(tag)}
-          >
-            {tag}
-          </button>
-        ))}
-      </div>
+      {tags.length ? (
+        <div className="tag-filter" aria-label="Filter entries by tag">
+          {tags.map((tag) => (
+            <button
+              type="button"
+              key={tag}
+              aria-pressed={activeTag === tag}
+              onClick={() => setActiveTag(tag)}
+            >
+              {tag}
+            </button>
+          ))}
+        </div>
+      ) : null}
 
       {visiblePosts.length ? (
         <ol className="post-list">
@@ -43,9 +48,15 @@ export function PostFeed({ posts }: { posts: Post[] }) {
                   {post.excerpt}
                 </p>
                 {post.href ? (
-                  <Link className="read-more" href={post.href}>
-                    Read more →
-                  </Link>
+                  post.href.startsWith("http") ? (
+                    <a className="read-more" href={post.href}>
+                      {post.type === "project" ? "Open project →" : "Read more →"}
+                    </a>
+                  ) : (
+                    <Link className="read-more" href={post.href}>
+                      {post.type === "project" ? "Open project →" : "Read more →"}
+                    </Link>
+                  )
                 ) : null}
               </article>
             </li>

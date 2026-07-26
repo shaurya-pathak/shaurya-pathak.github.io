@@ -13,31 +13,31 @@ export const posts: Post[] = [
     date: "July 25, 2026",
     type: "project",
     tags: ["software", "tools"],
-    provenance: "AI-assisted",
+    provenance: "AI-assisted writing",
     title: "Get Me to a Human",
     excerpt:
       "Calls a business, navigates the phone tree, and gets a person on the line.",
-    href: "/work#get-me-to-a-human",
+    href: "https://human.shauryapathak.com",
   },
   {
     date: "July 20, 2026",
     type: "project",
     tags: ["software", "tools"],
-    provenance: "AI-assisted",
+    provenance: "AI-assisted writing",
     title: "Glyde",
     excerpt:
       "Makes native Slidev presentations from structured briefs.",
-    href: "/work#glyde",
+    href: "https://github.com/shaurya-pathak/glyde",
   },
   {
     date: "April 8, 2026",
     type: "project",
     tags: ["software", "tools"],
-    provenance: "AI-assisted",
+    provenance: "AI-assisted writing",
     title: "Kaivra",
     excerpt:
       "Makes images, videos, and web previews from JSON or YAML.",
-    href: "/work#kaivra",
+    href: "https://github.com/shaurya-pathak/kaivra",
   },
 ];
 
@@ -45,17 +45,10 @@ export const projects = [
   {
     id: "get-me-to-a-human",
     name: "Get Me to a Human",
-    status: "Operator-supervised prototype · 2026",
+    status: "Mac-hosted prototype · 2026",
     description:
       "Calls businesses, navigates phone trees with DTMF, speaks with a representative, and records what happened. Speech recognition, synthesis, and model inference can run locally; Twilio carries the call.",
-  },
-  {
-    id: "kaivra",
-    name: "Kaivra",
-    status: "Active · 2026",
-    description:
-      "Makes images, videos, and web previews from JSON or YAML. Includes schemas, validation, reusable themes, narration timing, and a local MCP server.",
-    github: "https://github.com/shaurya-pathak/kaivra",
+    href: "https://human.shauryapathak.com",
   },
   {
     id: "glyde",
@@ -66,12 +59,12 @@ export const projects = [
     github: "https://github.com/shaurya-pathak/glyde",
   },
   {
-    id: "path-chess-zero",
-    name: "Path Chess Zero",
-    status: "Experiment · 2024",
+    id: "kaivra",
+    name: "Kaivra",
+    status: "Active · 2026",
     description:
-      "Chess engine using a residual network, policy and value heads, Monte Carlo tree search, historical board state, and self-play.",
-    github: "https://github.com/shaurya-pathak/path-chess-zero",
+      "Makes images, videos, and web previews from JSON or YAML. Includes schemas, validation, reusable themes, narration timing, and a local MCP server.",
+    github: "https://github.com/shaurya-pathak/kaivra",
   },
   {
     id: "canvas-to-spreadsheet",

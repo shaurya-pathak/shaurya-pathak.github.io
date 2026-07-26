@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function ExperiencePage() {
   return (
     <main className="page-shell">
-      <SiteHeader />
+      <SiteHeader current="experience" />
       <h1 className="sr-only">Experience</h1>
 
       <ol className="experience-list">

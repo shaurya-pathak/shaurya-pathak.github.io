@@ -10,11 +10,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="page-shell">
-      <SiteHeader />
+      <SiteHeader current="about" />
       <h1 className="sr-only">About</h1>
 
       <div className="about-copy">
-        <p>Software engineer in Santa Clara. I work at NVIDIA.</p>
         <p>I build personal software. I cook and play basketball.</p>
         <p>Opinions here are mine, not NVIDIA’s.</p>
       </div>

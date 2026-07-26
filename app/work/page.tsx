@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function WorkPage() {
   return (
     <main className="page-shell">
-      <SiteHeader />
+      <SiteHeader current="tools" />
       <h1 className="sr-only">Tools</h1>
 
       <ol className="project-list">
@@ -22,20 +22,16 @@ export default function WorkPage() {
               <p className="project-status">{project.status}</p>
             </div>
             <p>{project.description}</p>
-            {project.github ? (
+            {project.href || project.github ? (
               <div className="project-links">
-                <a href={project.github}>Source</a>
+                {project.href ? <a href={project.href}>Demo</a> : null}
+                {project.github ? <a href={project.github}>Source</a> : null}
               </div>
             ) : null}
           </li>
         ))}
       </ol>
 
-      <p>
-        <a className="text-link" href="https://github.com/shaurya-pathak">
-          More on GitHub
-        </a>
-      </p>
       <SiteFooter />
     </main>
   );
