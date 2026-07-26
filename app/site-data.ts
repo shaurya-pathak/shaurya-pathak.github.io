@@ -17,7 +17,7 @@ export const posts: Post[] = [
     title: "Get Me to a Human",
     excerpt:
       "Calls a business, navigates the phone tree, and gets a person on the line.",
-    href: "https://human.shauryapathak.com",
+    href: "http://human.shauryapathak.com",
   },
   {
     date: "July 20, 2026",
@@ -48,7 +48,7 @@ export const projects = [
     status: "Mac-hosted prototype · 2026",
     description:
       "Calls businesses, navigates phone trees with DTMF, speaks with a representative, and records what happened. Speech recognition, synthesis, and model inference can run locally; Twilio carries the call.",
-    href: "https://human.shauryapathak.com",
+    href: "http://human.shauryapathak.com",
   },
   {
     id: "glyde",
