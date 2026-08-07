@@ -10,6 +10,16 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    date: "August 7, 2026",
+    type: "project",
+    tags: ["software", "basketball"],
+    provenance: "AI-assisted writing",
+    title: "82-0 Value Board",
+    excerpt:
+      "Ranks NBA player-seasons, analyzes game strategy, and builds lineups for 82-0.",
+    href: "https://82-0-dashboard.vercel.app",
+  },
+  {
     date: "July 25, 2026",
     type: "project",
     tags: ["software", "tools"],
@@ -42,6 +52,15 @@ export const posts: Post[] = [
 ];
 
 export const projects = [
+  {
+    id: "82-0-value-board",
+    name: "82-0 Value Board",
+    status: "Active · 2026",
+    description:
+      "An interactive companion for 82-0. Look up the best players by team and era, compare every player-season, study strategy, and build a lineup with estimated odds from the remaining rolls.",
+    href: "https://82-0-dashboard.vercel.app",
+    github: "https://github.com/shaurya-pathak/82-0-dashboard",
+  },
   {
     id: "get-me-to-a-human",
     name: "Get Me to a Human",
