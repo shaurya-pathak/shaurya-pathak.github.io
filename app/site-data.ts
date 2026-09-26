@@ -10,6 +10,16 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    date: "September 26, 2026",
+    type: "project",
+    tags: ["software", "transit", "simulation"],
+    provenance: "Independent project",
+    title: "Muni Enforcement Lab",
+    excerpt:
+      "An interactive San Francisco map for exploring how mobile fare inspection strategies could affect fare revenue. Rider behavior and enforcement response are explicit sandbox assumptions, not Muni measurements.",
+    href: "https://shaurya-pathak.github.io/muni-enforcement-sim/",
+  },
+  {
     date: "August 7, 2026",
     type: "project",
     tags: ["software", "basketball"],
@@ -52,6 +62,15 @@ export const posts: Post[] = [
 ];
 
 export const projects = [
+  {
+    id: "muni-enforcement-lab",
+    name: "Muni Enforcement Lab",
+    status: "Interactive simulation · 2026",
+    description:
+      "An interactive San Francisco map for comparing mobile fare inspection strategies against route demand, travel schedules, inspection capacity, and modeled rider response. Synthetic behavior and revenue estimates are labeled as sandbox assumptions, not Muni findings.",
+    href: "https://shaurya-pathak.github.io/muni-enforcement-sim/",
+    github: "https://github.com/shaurya-pathak/muni-enforcement-sim",
+  },
   {
     id: "82-0-value-board",
     name: "82-0 Value Board",
