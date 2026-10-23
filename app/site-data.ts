@@ -10,6 +10,16 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    date: "October 22, 2026",
+    type: "project",
+    tags: ["software", "basketball", "simulation"],
+    provenance: "AI-assisted writing",
+    title: "NBA Policy Lab",
+    excerpt:
+      "A research prototype for exploring how draft rules and pick ownership shape tanking incentives, front-office decisions, and competitive balance in simulated NBA seasons.",
+    href: "/work#nba-policy-lab",
+  },
+  {
     date: "September 26, 2026",
     type: "project",
     tags: ["software", "transit", "simulation"],
@@ -62,6 +72,13 @@ export const posts: Post[] = [
 ];
 
 export const projects = [
+  {
+    id: "nba-policy-lab",
+    name: "NBA Policy Lab",
+    status: "Research prototype · 2026",
+    description:
+      "Uses Basketball GM as a simulation engine to explore how league rules, draft incentives, and pick ownership affect team strategy. Models front-office decisions, validates trades, and records season metrics and decision logs to compare policy experiments. The goal is to stress-test incentives around tanking and competitive balance.",
+  },
   {
     id: "muni-enforcement-lab",
     name: "Muni Enforcement Lab",
