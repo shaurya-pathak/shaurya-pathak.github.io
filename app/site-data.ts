@@ -2,7 +2,6 @@ export type Post = {
   date: string;
   type: "note" | "project" | "essay";
   tags: string[];
-  provenance: string;
   title?: string;
   excerpt: string;
   href?: string;
@@ -10,115 +9,109 @@ export type Post = {
 
 export const posts: Post[] = [
   {
-    date: "October 22, 2026",
-    type: "project",
-    tags: ["software", "basketball", "simulation"],
-    provenance: "AI-assisted writing",
-    title: "NBA Policy Lab",
-    excerpt:
-      "A research prototype for exploring how draft rules and pick ownership shape tanking incentives, front-office decisions, and competitive balance in simulated NBA seasons.",
-    href: "/work#nba-policy-lab",
-  },
-  {
     date: "September 26, 2026",
     type: "project",
     tags: ["software", "transit", "simulation"],
-    provenance: "Independent project",
     title: "Muni Enforcement Lab",
     excerpt:
-      "An interactive San Francisco map for exploring how mobile fare inspection strategies could affect fare revenue. Rider behavior and enforcement response are explicit sandbox assumptions, not Muni measurements.",
+      "I was curious about the most efficient way for Muni to collect fare revenue. I built an interactive San Francisco map to try different ways of deploying fare inspectors and compare the revenue they might bring in.",
     href: "https://shaurya-pathak.github.io/muni-enforcement-sim/",
   },
   {
     date: "August 7, 2026",
     type: "project",
     tags: ["software", "basketball"],
-    provenance: "AI-assisted writing",
     title: "82-0 Value Board",
     excerpt:
-      "Ranks NBA player-seasons, analyzes game strategy, and builds lineups for 82-0.",
+      "I was curious about player values and strategy in 82-0, so I made a board to compare player-seasons and build lineups. There isn't much more to it than that.",
     href: "https://82-0-dashboard.vercel.app",
   },
   {
     date: "July 25, 2026",
     type: "project",
     tags: ["software", "tools"],
-    provenance: "AI-assisted writing",
     title: "Get Me to a Human",
     excerpt:
-      "Calls a business, navigates the phone tree, and gets a person on the line.",
+      "Could speech recognition, a fast model, tool calls, and text-to-speech fit into a conversation without making someone wait too long? I built a phone agent to try it. The prototype connects those pieces to call businesses and navigate phone trees; conversational latency was the question I wanted to explore.",
     href: "https://human.shauryapathak.com",
   },
   {
     date: "July 20, 2026",
     type: "project",
     tags: ["software", "tools"],
-    provenance: "AI-assisted writing",
     title: "Glyde",
     excerpt:
-      "Makes native Slidev presentations from structured briefs.",
+      "I thought Slidev's Markdown and Vue would be an easier medium for an LLM to make slides in than PowerPoint's document format. Glyde is my attempt to extend it with the presentation features I want and tools an LLM can use. It can generate and preview decks, but it's still an unfinished experiment.",
     href: "https://github.com/shaurya-pathak/glyde",
+  },
+  {
+    date: "April 26, 2026",
+    type: "project",
+    tags: ["software", "basketball", "simulation"],
+    title: "NBA Policy Lab",
+    excerpt:
+      "I wanted to see how well LLM agents could simulate semi-rational decision-making: each NBA team with its own goals, information, and reasons to act. I got agents making decisions and considering trades inside a season simulator. The broader question was whether changing league rules would change their behavior in useful ways, and whether this approach could work elsewhere.",
+    href: "/work#nba-policy-lab",
   },
   {
     date: "April 8, 2026",
     type: "project",
     tags: ["software", "tools"],
-    provenance: "AI-assisted writing",
     title: "Kaivra",
     excerpt:
-      "Makes images, videos, and web previews from JSON or YAML.",
+      "I tried to give AI a tool for making narrated explainer videos. I got animations synchronized with speech, but getting it to teach a concept clearly took far more iteration than I wanted. The animation was often too sparse or hard to follow. I eventually set it aside.",
     href: "https://github.com/shaurya-pathak/kaivra",
   },
 ];
 
 export const projects = [
   {
-    id: "nba-policy-lab",
-    name: "NBA Policy Lab",
-    status: "Research prototype · 2026",
-    description:
-      "Uses Basketball GM as a simulation engine to explore how league rules, draft incentives, and pick ownership affect team strategy. Models front-office decisions, validates trades, and records season metrics and decision logs to compare policy experiments. The goal is to stress-test incentives around tanking and competitive balance.",
-  },
-  {
     id: "muni-enforcement-lab",
     name: "Muni Enforcement Lab",
     status: "Interactive simulation · 2026",
     description:
-      "An interactive San Francisco map for comparing mobile fare inspection strategies against route demand, travel schedules, inspection capacity, and modeled rider response. Synthetic behavior and revenue estimates are labeled as sandbox assumptions, not Muni findings.",
+      "I was curious about how Muni could collect more fare revenue with the inspectors it has. I built an interactive San Francisco map to compare where inspectors go, how they move between routes, and how much revenue different strategies might collect. I got as far as a working simulation for trying those choices and seeing how the results change.",
     href: "https://shaurya-pathak.github.io/muni-enforcement-sim/",
     github: "https://github.com/shaurya-pathak/muni-enforcement-sim",
   },
   {
     id: "82-0-value-board",
     name: "82-0 Value Board",
-    status: "Active · 2026",
+    status: "Small project · 2026",
     description:
-      "An interactive companion for 82-0. Look up the best players by team and era, compare every player-season, study strategy, and build a lineup with estimated odds from the remaining rolls.",
+      "I was curious about player values and strategy in 82-0. I made a board to compare player-seasons, look up players by team and era, and build lineups with odds based on the remaining rolls. It's a working companion for the game; there isn't a bigger thesis behind it.",
     href: "https://82-0-dashboard.vercel.app",
     github: "https://github.com/shaurya-pathak/82-0-dashboard",
   },
   {
     id: "get-me-to-a-human",
     name: "Get Me to a Human",
-    status: "Mac-hosted prototype · 2026",
+    status: "Phone agent prototype · 2026",
     description:
-      "Calls businesses, navigates phone trees with DTMF, speaks with a representative, and records what happened. Speech recognition, synthesis, and model inference can run locally; Twilio carries the call.",
+      "I wanted to see whether speech recognition, quick reasoning with flash models, tool calls, and text-to-speech could happen fast enough for a person to comfortably interact with the system. I put those pieces into a phone agent that calls businesses, navigates phone trees, and talks to a representative. I got the calling workflow into a prototype; the interesting part for me was how much delay the whole conversation loop adds.",
     href: "https://human.shauryapathak.com",
   },
   {
     id: "glyde",
     name: "Glyde",
-    status: "Experimental · 2026",
+    status: "Unfinished experiment · 2026",
     description:
-      "Generates, previews, and hosts native Slidev decks. The output stays in Markdown. Includes reusable Vue components, themes, viewport checks, and live audience interaction.",
+      "The excitement about LLMs making PowerPoints made me wonder why we were asking them to work through a format built around visual editing. Slidev uses Markdown and Vue, which seemed like a much more natural starting point for a model. I started Glyde to make Slidev easier for an LLM to use and add the presentation features I wanted. It can generate, preview, and host decks, with reusable components and themes. I haven't finished making it as feature-rich as I'd like.",
     github: "https://github.com/shaurya-pathak/glyde",
+  },
+  {
+    id: "nba-policy-lab",
+    name: "NBA Policy Lab",
+    status: "Simulation experiment · April–July 2026",
+    description:
+      "I wanted to see whether LLM agents could act as semi-rational participants in a world with competing incentives. NBA teams seemed like a useful setting: each has its own roster, information, goals, and reasons to make a different decision. I used Basketball GM to run seasons while agents considered trades and carried their own context and memory. I got that decision loop working with legal trade execution and logs. My game-theory question was how changing draft rules or rewards would change behavior, and whether this way of experimenting with incentives could be useful beyond basketball.",
   },
   {
     id: "kaivra",
     name: "Kaivra",
-    status: "Active · 2026",
+    status: "Set aside · 2026",
     description:
-      "Makes images, videos, and web previews from JSON or YAML. Includes schemas, validation, reusable themes, narration timing, and a local MCP server.",
+      "Similar to Glyde, I wanted to build a medium AI could work in, this time for narrated explainer videos. I got animations synchronized with the voice, which was an interesting challenge. Teaching clearly was much harder: the model would use too little animation, make motion that didn't explain the idea, or need repeated image revisions. Getting an understandable video took more refining than I wanted from the project, so I set it aside. I still think the idea could become more attainable as the models improve.",
     github: "https://github.com/shaurya-pathak/kaivra",
   },
   {
