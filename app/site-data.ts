@@ -9,6 +9,15 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    date: "October 27, 2026",
+    type: "essay",
+    tags: ["AI", "basketball", "simulation"],
+    title: "Can LLMs simulate competing interests?",
+    excerpt:
+      "I gave 30 NBA teams their own agents, context, and goals inside Basketball GM. I wanted to explore how changing the rules could change their decisions.",
+    href: "/writing/nba-policy-lab/",
+  },
+  {
     date: "September 26, 2026",
     type: "project",
     tags: ["software", "transit", "simulation"],
